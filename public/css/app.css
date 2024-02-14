@@ -1,0 +1,465 @@
+body {
+  font-family: 'Arial', Times, serif !important;
+}
+
+.submenu-1 {
+  display: none;
+}
+#nav1 {
+  color: white;
+}
+/* 
+#nav1  a.nav-link:hover {
+  background-color: #fda325;
+  color: black;
+  transition: all 0.3s ease;
+} */
+#nav2 {
+  background-color: #00BFFF;
+}
+/* #low-quantity-products-link{
+  color: white;
+}
+#low-quantity-products-link:hover{
+  background-color: white;
+  color: #00BFFF;
+  transition: all 0.3s ease;
+} */
+#nav2  a.nav-link{
+  color: white;
+}
+#nav2  a.nav-link:hover {
+  background-color: white;
+  color: #00BFFF;
+  transition: all 0.3s ease;
+}
+  .submenu {
+    display: none;
+  }
+
+  .nav-item:hover .submenu {
+    display: block;
+  }
+  body {
+      background: url('../images/image.jpg') no-repeat center center fixed;
+      background-size: cover;
+  }
+  h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: inherit;
+    filter: blur(2px);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+  }
+  .nav-link.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  /* Styles pour la page des produits */
+
+/* Couleur du texte et fond de l'alerte pour les produits en faible quantité */
+.product-alert {
+color: white;
+background-color: red;
+}
+
+/* Boutons d'action */
+.btn {
+margin-right: 10px;
+}
+
+/* Bouton "Ajouter un produit" */
+.btn-success {
+float: right;
+}
+
+/* Formulaire de recherche */
+.form-inline {
+display: flex;
+justify-content: center;
+}
+
+/* Barre de recherche */
+#produit {
+margin-right: 10px;
+}
+
+/* Tableau des produits */
+.table {
+margin-top: 20px;
+}
+
+/* Lien "Voir" */
+.btn-info {
+background-color: #17a2b8;
+}
+
+/* Lien "Modifier" */
+.btn-warning {
+background-color: #ffc107;
+}
+
+/* Lien "Supprimer" */
+.btn-danger {
+background-color: #dc3545;
+}
+
+/* Pagination */
+.pagination {
+justify-content: center;
+margin-top: 20px;
+}
+table {
+font-family: 'Noto Sans', sans-serif;
+background: linear-gradient(to right, #2980b9, #2c3e50);
+padding: 0;
+border-radius: 10px;
+border: none;
+box-shadow: 0 0 0 5px rgba(0,0,0,0.05),0 0 0 10px rgba(0,0,0,0.05);
+}
+
+thead tr th {
+color: #050404;
+background-color:white !important;
+font-size: 18px;
+font-weight: 500;
+text-transform: uppercase;
+padding: 12px;
+border: none;
+}
+
+tbody tr td {
+color: #fff;
+font-size: 15px;
+padding: 10px 12px;
+vertical-align: middle;
+border: none;
+}
+
+tbody tr:nth-child(even) {
+background-color: rgba(255,255,255,0.05);
+}
+
+.pagination {
+display: flex;
+justify-content: center;
+align-items: center;
+list-style: none;
+margin: 20px 0;
+padding: 0;
+}
+
+.pagination li {
+display: inline-block;
+margin: 0 5px;
+}
+
+.pagination li a {
+color: #fff;
+background-color: transparent;
+border: 2px solid #fff;
+font-size: 16px;
+text-transform: uppercase;
+padding: 5px 10px;
+border-radius: 30px;
+transition: all 0.3s ease 0s;
+}
+
+.pagination li.active a,
+.pagination li a:hover {
+background-color: #fff;
+color: #2c3e50;
+}
+.card-header {
+background-color: black;
+color: #fff;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-radius: 10px 10px 0 0;
+}
+
+.card-header h3 {
+font-size: 1.5rem;
+margin: 0;
+text-transform: capitalize;
+}
+
+.card-header form {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+.modal-content {
+background-color: #f8f9fa;
+}
+
+/* Couleur de fond du header */
+.modal-header {
+background-color: #2980b9;
+color: #fff;
+}
+
+/* Couleur de fond du footer */
+.modal-footer {
+background-color: #f8f9fa;
+}
+
+/* Couleur du texte du bouton Fermer */
+.modal-footer button {
+color: black;
+background-color: #ffc107;
+}
+.modal-body {
+max-height: 400px; 
+overflow-y: auto; 
+}
+
+
+/* Style des listes dans le corps du modal */
+.modal-body ul {
+list-style: none;
+padding-left: 0;
+}
+
+/* Style des éléments de liste */
+.modal-body li {
+margin-bottom: 0.5rem;
+}
+
+::-webkit-scrollbar {
+width: 8px;
+}
+
+::-webkit-scrollbar-track {
+background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+background-color: #AAA;
+border-radius: 20px;
+border: 2px solid #F5F5F5;
+}
+.modal-header button {
+background-color: #2980b9;
+}
+.modal-header button:hover{
+background-color: red;
+}
+.modal-header button i {
+color: red;
+font-size: 25px;
+}
+.modal-header button i:hover{
+color: white;
+}
+#crd_header{
+  background-color: rgba(255,255,255,0.5);
+}
+#btn {
+  /* border-radius: 5%; */
+  background-color: #00bfff8a;
+  border: 1px solid white;
+}
+#btn:hover{
+  background-color: white;
+  color:#00BFFF;
+}
+
+#Search {
+  color: #fff;
+  background-color: transparent;
+  width: 35%;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+}
+#Search:hover{
+  background-color: rgba(255,255,255,0.2);
+  box-shadow: none;
+  outline: none;
+}
+#searchIcon {
+  color: rgba(255,255,255,0.5);
+  background: transparent;
+  font-size: 22px;
+  text-transform: capitalize;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  transition: all 0.3s ease 0s;
+  padding-bottom: 5%;
+}
+.form-inline {
+  padding-top: 2%;
+}
+/* Container CSS */
+.select2-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  font-size: 16px;
+}
+
+/* Dropdown CSS */
+.select2-dropdown {
+  position: absolute;
+  z-index: 9999;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  margin-top: 4px;
+}
+
+/* Dropdown option CSS */
+.select2-dropdown .select2-results__option {
+  padding: 8px 12px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Dropdown option hover CSS */
+.select2-dropdown .select2-results__option:hover {
+  background-color: #f4f4f4;
+}
+
+/* Dropdown option selected CSS */
+.select2-dropdown .select2-results__option[aria-selected=true] {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Dropdown search box CSS */
+.select2-search__field {
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Dropdown search box placeholder CSS */
+.select2-search__field::placeholder {
+  color: #aaa;
+}
+
+/* Dropdown search box focus CSS */
+.select2-search__field:focus {
+  outline: none;
+  box-shadow: 0 0 2px #007bff;
+}
+
+/* Dropdown arrow CSS */
+.select2-selection__arrow {
+  height: 34px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 34px;
+  z-index: 1;
+}
+
+/* Dropdown arrow icon CSS */
+.select2-selection__arrow b {
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: -2px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+  border-color: #666 transparent transparent transparent;
+}
+
+/* Dropdown arrow hover CSS */
+.select2-container:hover .select2-selection__arrow {
+  background-color: #f4f4f4;
+}
+
+/* Dropdown arrow active CSS */
+.select2-container.select2-container--open .select2-selection__arrow {
+  transform: rotate(180deg);
+}
+
+/* Selected option CSS */
+.select2-selection__choice {
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  padding: 3px 10px;
+  margin: 2px;
+  font-size: 14px;
+}
+
+/* Selected option remove icon CSS */
+.select2-selection__choice__remove {
+  margin-left: 5px;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* Placeholder CSS */
+.select2-selection__placeholder {
+  color: #aaa;
+  font-size: 16px;
+  font-style: italic;
+}
+.sidebar-menu li span {
+  display: none;
+}
+.sidebar ul li a .hide-text {
+  display: none;
+}
+
+@media screen and (min-width: 900px) {
+  .sidebar ul li a .hide-text {
+    display: inline-block;
+  }
+}
+.sidebar {
+  position: relative; /* Ajout de cette propriété */
+  width: 100%;
+  min-height: 100vh;
+  background-color: #343a40;
+}
+.sidebar-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background-color: #343a40; /* ou la couleur de fond que vous souhaitez pour la sidebar-bottom */
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff; /* ou la couleur que vous souhaitez pour le texte */
+}
+.logo span{
+  font-family: "Lucida Console", Courier, monospace;
+  color: white;
+  text-shadow: 2px 2px 4px #007bff;
+  font-size: large;
+}

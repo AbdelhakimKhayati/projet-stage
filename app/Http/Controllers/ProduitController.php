@@ -28,13 +28,6 @@ class ProduitController extends Controller
         return view('produits.index', ['produits']);
     }
 
-    public function getLowQuantityProducts()
-    {
-    $low_q_products = Produit::where('quantite', '<', 10)->pluck('nom');
-    return response()->json(['products' => $low_q_products]);
-    }
-
-
     /**
      * Affiche le formulaire de création d'un nouveau produit.
      *

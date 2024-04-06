@@ -1,11 +1,12 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\VenteController;
 use App\Http\Controllers\ProduitController;
 use App\Http\Controllers\CommandeController;
-use App\Http\Controllers\FournisseurController;
 use App\Http\Controllers\DashboardController;
-use App\Http\Controllers\VenteController;
+use App\Http\Controllers\FournisseurController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,7 +20,6 @@ use App\Http\Controllers\VenteController;
 
 Auth::routes();
 Route::middleware(['auth'])->group(function () {
-    Route::get('/low-quantity-products', [ProduitController::class, 'getLowQuantityProducts']);
     Route::resource('produits', 'App\Http\Controllers\ProduitController');
     Route::post('/ajouter-produit', [ProduitController::class, 'modalProduit'])->name('ajouter_produit');
     Route::Put('/ajouter-update', [ProduitController::class, 'edit'])->name('produits.update');

@@ -69,7 +69,7 @@
                               {{ $produits->onEachSide(0)->links() }}
                             </div>
                           </div>
-                          
+
                     </div>
                 </div>
             </div>

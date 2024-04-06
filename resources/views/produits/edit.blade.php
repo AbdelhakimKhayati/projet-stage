@@ -1,35 +1,4 @@
-{{-- @extends('layouts.app')
 
-@section('content')
-<div class="container">
-    <h1 class="text-center mb-5">Modifier le produit : {{ $produit->nom }}</h1>
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <form action="{{ route('produits.update', $produit) }}" method="POST">
-                @csrf
-                @method('PUT')
-                <div class="form-group">
-                    <label for="nom">Nom</label>
-                    <input type="text" class="form-control" id="nom" name="nom" value="{{ $produit->nom }}">
-                </div>
-                <div class="form-group">
-                    <label for="reference">Référence</label>
-                    <input type="text" class="form-control" id="reference" name="reference" value="{{ $produit->reference }}">
-                </div>
-                <div class="form-group">
-                    <label for="marque">Marque</label>
-                    <input type="text" class="form-control" id="marque" name="marque" value="{{ $produit->marque }}">
-                </div>
-                <div class="form-group">
-                    <label for="prix">Prix</label>
-                    <input type="number" class="form-control" id="prix" name="prix" value="{{ $produit->prix }}">
-                </div>
-                <button type="submit" class="btn btn-primary">Valider</button>
-            </form>
-        </div>
-    </div>
-</div>
-@endsection --}}
 @extends('layouts.app')
 
 @section('content')

@@ -16,18 +16,18 @@ class ProduitController extends Controller
     public function index(Request $request)
     {
         $query = Produit::query();
-    
+
         if ($request->has('produit')) {
             $query->where('nom', 'like', '%'.$request->produit.'%');
         }
-    
+
         $produits = $query->orderBy('created_at', 'desc')->paginate(5);
-    
-        $low_q= Produit::where('quantite', '<', 10)->count();
-    
-        return view('produits.index', compact('produits', 'low_q'));
+
+        // $low_q= Produit::where('quantite', '<', 20)->count();
+
+        return view('produits.index', ['produits']);
     }
-    
+
     public function getLowQuantityProducts()
     {
     $low_q_products = Produit::where('quantite', '<', 10)->pluck('nom');
@@ -43,21 +43,21 @@ class ProduitController extends Controller
     public function create()
     {
         return view('produits.create');
-        
+
     }
     public function createModal()
     {
         return view('commandes.produit');
-        
+
     }
-    
+
     public function search(Request $request)
     {
       $produits = Produit::where('nom', 'like', '%' . $request->query . '%')->get();
       return view('produits.search', compact('produits'));
     }
-     
-    
+
+
 
     /**
      * Enregistre un nouveau produit dans la base de données.
@@ -84,7 +84,7 @@ class ProduitController extends Controller
             'prix.min' => 'Le prix du produit doit être supérieur ou égal à 0.',
             'description.required' => 'La description du produit est obligatoire.',
         ]);
-    
+
         $produit = new Produit();
         $produit->nom = $validatedData['nom'];
         $produit->reference = $validatedData['reference'];
@@ -92,7 +92,7 @@ class ProduitController extends Controller
         $produit->prix = $validatedData['prix'];
         $produit->description = $validatedData['description'];
         $produit->save();
-    
+
         return redirect()->route('produits.index')->with('success', 'Le produit a été ajouté avec succès.');
     }
 
@@ -116,12 +116,12 @@ class ProduitController extends Controller
             'prix.min' => 'Le prix du produit doit être supérieur ou égal à 0.',
             'description.required' => 'La description du produit est obligatoire.',
         ]);
-    
+
         if ($validator->fails()) {
             session()->flash('produit');
             return redirect()->back()->withErrors($validator)->withInput();
         }
-    
+
         $produit = new Produit();
         $produit->nom = $request->input('nom');
         $produit->reference = $request->input('reference');
@@ -129,7 +129,7 @@ class ProduitController extends Controller
         $produit->prix = $request->input('prix');
         $produit->description = $request->input('description');
         $produit->save();
-    
+
         return redirect()->route('commandes.create')->with('success', 'Le produit a été ajouté avec succès.');
     }
 
